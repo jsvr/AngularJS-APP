@@ -1,0 +1,13 @@
+<ul class="container post-list">
+  <li ui-sref="position({id: pos.id})" ng-repeat="pos in list|filterById:filterObj|orderBy: '-date'">
+    <img ng-src="{{pos.imageUrl}}" alt="">
+    <p>
+      <span class="job" ng-bind="::pos.job"></span><br>
+      <span class="company" ng-bind-template="{{::pos.companyName}}[{{::pos.cityName}}] {{::pos.industryName}} "></span><br>
+      <span class="info" ng-bind="::pos.date"></span><br>
+    </p>
+    <span class="salary" ng-bind="::pos.salary"></span>
+    <span ng-if="operable" class="favorite {{pos.select?'select':''}}" ng-click="$event.stopPropagation();toggle(pos);"></span>
+    <span ng-if="evaluationVisible" class="{{::pos.state==='1'?'evaluation':'reject'}}" ng-bind-template="【{{::pos.state==='1'?'邀约面试':'不合适'}}】"></span>
+  </li>
+</ul>

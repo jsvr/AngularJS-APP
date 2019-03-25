@@ -1,0 +1,60 @@
+.post-list{
+  padding: 0;
+  margin: 0;
+  .favorite{
+    background-image: url(../image/star.png);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem;
+    &.select{
+      background-image: url(../image/star-active.png);
+    }
+  }
+  li{
+    position: relative;
+    list-style: none;
+    padding: 0.2rem 0.1rem;
+    border-bottom: 1px solid #ccc;
+    img{
+      width: 2rem;
+      height: 2rem;
+    }
+    p{
+      display: inline-block;
+      padding: 0 0 0 10px;
+      margin: 0;
+      width: 7rem;
+      .job{
+        font-size: 0.6rem;
+        font-weight: bold;
+      }
+      .company{
+        font-size: 0.3rem;
+      }
+      .info{
+        font-size: 0.2rem;
+        color: @grey;
+      }
+    }
+    .salary{
+      position: absolute;
+      right: 10px;
+      bottom: 25px;
+    }
+    .evaluation{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: @green;
+    }
+    .reject{
+      position: absolute;
+      right: 10px;
+      top: 1rem;
+      color: red;
+    }
+  }
+}

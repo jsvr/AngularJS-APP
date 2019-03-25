@@ -1,0 +1,15 @@
+<div class="action-sheet-backdrop active" ng-show="visible" ng-click="cancel();">
+  <div class="action-sheet-wrapper">
+    <div class="action-sheet">
+      <div class="action-sheet-group action-sheet-options">
+        <div class="action-sheet-title" ng-if="titleText" ng-bind="titleText"></div>
+        <button class="button action-sheet-option {{buttons.index==$index?'active':''}}" 
+        ng-click="$event.stopPropagation();buttonClick($index, b)"
+        ng-repeat="b in buttons track by $index" ng-bind="b.text"></button>
+      </div>
+      <div class="action-sheet-group action-sheet-cancel" ng-if="cancelText">
+        <button class="button" ng-click="cancel();" ng-bind="cancelText"></button>
+      </div>
+    </div>
+  </div>
+</div>

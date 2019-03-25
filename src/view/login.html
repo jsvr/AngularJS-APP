@@ -1,0 +1,14 @@
+<div class="login-background">
+  <form name="form" novalidate>
+    <div class="form-control">
+      <span class="icon account"></span>
+      <input name="phone" validator="required,phone" required-error-message="手机号必须填写" type="text" class="phone" placeholder="输入手机号" ng-model="user.phone">
+    </div>
+    <div class="form-control">
+      <span class="icon lock"></span>
+      <input name="password" validator="required,minlength=6" required-error-message="密码必须填写" type="password" class="password" placeholder="输入密码" ng-model="user.password">
+    </div>
+    <button validation-submit="form" class="button login-btn" ng-click="login();">登陆</button>
+    <a class="button register-btn" ui-sref="register">注册</a>
+  </form>
+</div>

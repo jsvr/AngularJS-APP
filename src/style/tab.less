@@ -1,0 +1,20 @@
+.tab {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  background-color: rgb(247,247,247);
+  height: 1.2rem;
+  display: table;
+  li {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    list-style: none;
+    font-size: 0.4rem;
+    border-bottom: 2px solid rgb(247,247,247);
+    &.active {
+      border-bottom: 2px solid @green;
+    }
+  }
+}

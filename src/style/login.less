@@ -1,0 +1,70 @@
+::-webkit-input-placeholder { color:#fff;}
+.login-background{
+  background-image: url(../image/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  form{
+    position: fixed;
+    top: 7rem;
+    width: 100%;
+    text-align: center;
+    div.form-control,.button{
+      width: 8rem;
+      margin: 0 auto;
+    }
+    .button{
+      display: block;
+      background-color: @green;
+      border: 1px solid @green;
+      font-size: 0.6rem;
+      font-weight: bold;
+      height: 1rem;
+      line-height: 1rem;
+      &.login-btn{
+        margin-top: 2rem;
+        color: #fff;
+      }
+      &.register-btn{
+        margin-top: 0.5rem;
+        color: @green;
+        background-color: @green-a;
+      }
+    }
+    div.form-control:first-child{
+      border-bottom: 1px solid #fff;
+    }
+    input{
+      padding: 0;
+      border-width: 0;
+      color: #fff;
+      background-color: rgba(0,0,0, 0.2);
+      height: 40px;
+      line-height: 40px;
+      width: 6.5rem;
+      padding-left: 0.8rem;
+
+    }
+    .icon{
+      float: left;
+      display: inline-block;
+      height: 40px;
+      width: 1.5rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      background-color: rgba(0,0,0,0.4);
+      &.account{
+        background-image: url(../image/account.png);
+      }
+      &.lock{
+        background-image: url(../image/lock.png);
+      }
+    }
+  }
+}
+.validation-invalid{
+  color: red;
+  margin: 0;
+}

@@ -1,0 +1,41 @@
+form.register-form {
+  top: 1.5rem;
+  .form-control {
+    position: relative;
+    [name="message"] {
+      width: 5rem;
+    }
+    .message-code {
+      position: absolute;
+      right: 10px;
+      top: 0.5rem;
+      color: @green;
+      border: 1px solid @green;
+      padding: 0 10px;
+      &.disable {
+        color: @grey;
+        border: 1px solid @grey;
+      }
+    }
+    &.mt1 {
+      margin-top: 1rem;
+    }
+    &.image-code {
+      margin-top: 1rem;
+      input {
+        width: 100%;
+        padding-left: 2.3rem;
+      }
+    }
+    &.password {
+      margin-top: 1rem;
+      input {
+        width: 100%;
+        padding-left: 2.3rem;
+      }
+    }
+  }
+  button.button.mt1 {
+    margin-top: 1rem;
+  }
+}

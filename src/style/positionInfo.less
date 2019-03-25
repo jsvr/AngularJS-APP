@@ -1,0 +1,39 @@
+.ml20{
+  margin-left: 20px;
+}
+.color-red{
+  color: red;
+}
+.position-image{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 10px;
+}
+.position-company-info{
+  position: relative;
+  .favorite{
+    background-image: url(../image/star.png);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem;
+    &.select{
+      background-image: url(../image/star-active.png);
+    }
+  }
+}
+.bottom-btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-width: 0;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background-color: @green;
+  color: #fff;
+  &.disabled{
+    background-color: @grey;
+  }
+}

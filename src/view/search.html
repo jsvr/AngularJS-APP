@@ -1,0 +1,9 @@
+<div class="text-center search-wraper">
+  <button class="cancel" ng-click="keyword=''">取消</button>
+  <input type="text" ng-model="keyword" ng-focus="style.position='absolute';" ng-blur="style.position = null;" placeholder="搜索职位/公司/城市">
+  <button class="search" ng-click="search();">搜索</button>
+</div>
+<mk-tab tab-list="tabs" tab-click="showTab();"></mk-tab>
+<mk-position-list data="positionList" filter-obj="filterObj"></mk-position-list>
+<mk-foot-bar ng-style="style"></mk-foot-bar>
+<mk-action-sheet visible="sheetVisible" buttons="buttons" cancel-text="cancelText" cancel-click="chooseItem(b);"></mk-action-sheet>

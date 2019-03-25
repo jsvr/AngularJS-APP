@@ -1,0 +1,13 @@
+<mk-head-bar headline="'职位详情'" back="true"></mk-head-bar>
+<mk-position-info data="position"></mk-position-info>
+<mk-company-info data="company"></mk-company-info>
+<div class="container mt10">
+  <div class="p10 border-bottom">
+    <b>职位描述</b>
+  </div>
+  <pre class="p10" ng-bind="::position.description">
+  </pre>
+</div>
+<button ng-if="available" class="bottom-btn" ng-click="next();">投个简历</button>
+<button ng-if="!available&&!!isLogin" class="bottom-btn disabled" >已投递</button>
+<button ng-if="!available&&!isLogin" class="bottom-btn" ui-sref="login">去登陆</button>

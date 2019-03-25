@@ -1,0 +1,13 @@
+<div class="container p10">
+  <div class="border-bottom">
+    <h5 class="mt0">职位分类</h5>
+    <button ng-init="$first?postClass.id=cls.id:1==1;" ng-click="postClass.id=cls.id;" ng-repeat="cls in postClass" class="btn btn-radius {{cls.id===postClass.id?'btn-inverse':''}}" ng-bind="cls.name"></button>
+  </div>
+  <ul ng-repeat="cls in postClass|filter:{id:postClass.id}" class="post-simple-list">
+    <li ui-sref="position" ng-repeat="pos in cls.positionList">
+      <p class="position-text" ng-bind="::pos.name"></p>
+      <p class="position-text" ng-bind="::pos.createdDate"></p>
+      <span class="position-salary" ng-bind="::pos.salary"></span>
+    </li>
+  </ul>
+</div>

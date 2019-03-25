@@ -1,0 +1,18 @@
+<div class="login-background">
+    <form name="form" class="register-form" novalidate="">
+        <div class="form-control">
+            <span class="icon account"></span>
+            <input name="phone" validator="required,phone" required-error-message="手机号必须填写" type="text" class="phone" placeholder="输入手机号" ng-model="phone">
+        </div>
+        <div class="form-control">
+          <span class="icon lock"></span>
+          <input type="password" name="password" ng-model="password" validator="required,minlength=6" required-error-message="密码必须填写" placeholder="设置6位以上的密码">
+        </div>
+        <div class="form-control clear mt1">
+            <input name="message" maxlength="6" validator="required" class="float-left" placeholder="短信验证码" ng-model="message">
+            <a class="message-code {{countdown?'disable':''}}" ng-click="sendMessage();" ng-bind="countdown?(countdown+'s'):'发送短信'"></a>
+        </div>
+        <button class="button login-btn mt1" ui-sref="login">登陆</button>
+        <button validation-submit="form" ng-click="regist()" class="button register-btn">注册</button>
+    </form>
+</div>

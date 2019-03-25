@@ -1,0 +1,47 @@
+.foot-bar {
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid rgb(210,210,210);
+  background-color: rgb(245,245,245);
+  display: table;
+  width: 100%;
+  text-align: center;
+  z-index: 9;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  span {
+    &.select {
+      background-color: @green-a;
+      color: @green;
+    }
+    display: table-cell;
+    padding: 0;
+    width: 33%;
+    font-size: 0.6rem;
+    color: #aaa;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: 0.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    &.position::after{
+      left: 0.5rem;
+      top: 0.4rem;
+      background-image: url("../image/document.png");
+    }
+    &.search::after {
+      left: 0.5rem;
+      top: 0.35rem;
+      background-image: url("../image/search.png");
+    }
+    &.my::after {
+      top: 0.3rem;
+      left: 0.8rem;
+      background-image: url("../image/my.png");
+    }
+  }
+}
